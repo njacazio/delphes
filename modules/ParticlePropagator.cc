@@ -350,38 +350,38 @@ void ParticlePropagator::Process()
 	}
         if(t2 < 0.0) t2 = 1.0E99;
 	else {
-	  x_t = x_c + r * TMath::Sin(omega * t1 - phi_0);
-	  y_t = y_c + r * TMath::Cos(omega * t1 - phi_0);
+	  x_t = x_c + r * TMath::Sin(omega * t2 - phi_0);
+	  y_t = y_c + r * TMath::Cos(omega * t2 - phi_0);
 	  r_t = TMath::Hypot(x_t, y_t);
-	  if (fabs(r_t - fRadius) > 1.0E-9) t1 = 1.0E99;
+	  if (fabs(r_t - fRadius) > 1.0E-9) t2 = 1.0E99;
 	}
         if(t3 < 0.0) t3 = 1.0E99;
 	else {
-	  x_t = x_c + r * TMath::Sin(omega * t1 - phi_0);
-	  y_t = y_c + r * TMath::Cos(omega * t1 - phi_0);
+	  x_t = x_c + r * TMath::Sin(omega * t3 - phi_0);
+	  y_t = y_c + r * TMath::Cos(omega * t3 - phi_0);
 	  r_t = TMath::Hypot(x_t, y_t);
-	  if (fabs(r_t - fRadius) > 1.0E-9) t1 = 1.0E99;
+	  if (fabs(r_t - fRadius) > 1.0E-9) t3 = 1.0E99;
 	}
         if(t4 < 0.0) t4 = 1.0E99;
 	else {
-	  x_t = x_c + r * TMath::Sin(omega * t1 - phi_0);
-	  y_t = y_c + r * TMath::Cos(omega * t1 - phi_0);
+	  x_t = x_c + r * TMath::Sin(omega * t4 - phi_0);
+	  y_t = y_c + r * TMath::Cos(omega * t4 - phi_0);
 	  r_t = TMath::Hypot(x_t, y_t);
-	  if (fabs(r_t - fRadius) > 1.0E-9) t1 = 1.0E99;
+	  if (fabs(r_t - fRadius) > 1.0E-9) t4 = 1.0E99;
 	}
         if(t5 < 0.0) t5 = 1.0E99;
 	else {
-	  x_t = x_c + r * TMath::Sin(omega * t1 - phi_0);
-	  y_t = y_c + r * TMath::Cos(omega * t1 - phi_0);
+	  x_t = x_c + r * TMath::Sin(omega * t5 - phi_0);
+	  y_t = y_c + r * TMath::Cos(omega * t5 - phi_0);
 	  r_t = TMath::Hypot(x_t, y_t);
-	  if (fabs(r_t - fRadius) > 1.0E-9) t1 = 1.0E99;
+	  if (fabs(r_t - fRadius) > 1.0E-9) t5 = 1.0E99;
 	}
         if(t6 < 0.0) t6 = 1.0E99;
 	else {
-	  x_t = x_c + r * TMath::Sin(omega * t1 - phi_0);
-	  y_t = y_c + r * TMath::Cos(omega * t1 - phi_0);
+	  x_t = x_c + r * TMath::Sin(omega * t6 - phi_0);
+	  y_t = y_c + r * TMath::Cos(omega * t6 - phi_0);
 	  r_t = TMath::Hypot(x_t, y_t);
-	  if (fabs(r_t - fRadius) > 1.0E-9) t1 = 1.0E99;
+	  if (fabs(r_t - fRadius) > 1.0E-9) t6 = 1.0E99;
 	}
 
         t_ra = TMath::Min(t1, TMath::Min(t2, t3));
