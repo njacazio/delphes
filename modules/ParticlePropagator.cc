@@ -296,6 +296,14 @@ void ParticlePropagator::Process()
       yd = (rc2 > 0.0) ? yd / rc2 : -999;
       zd = z + (TMath::Sqrt(xd * xd + yd * yd) - TMath::Sqrt(x * x + y * y)) * pz / pt;
 
+      // R+fix
+      auto t0 = atan2(y - y_c, x - x_c); // t at vertex
+      auto t1 = atan2(yd - y_c, xd - x_c); // t at dca
+      auto td = atan2(sin(t1 - t0), cos(t1 - t0)); // distance
+      //      if (r < 0 && td > 0) td -= 2. * M_PI;
+      //      if (r > 0 && td < 0) td += 2. * M_PI;
+      zd = z - r * pz / pt * td;
+      
       // use perigee momentum rather than original particle
       // momentum, since the orignal particle momentum isn't known
 
