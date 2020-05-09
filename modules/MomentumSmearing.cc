@@ -123,6 +123,7 @@ void MomentumSmearing::Process()
     candidate->Momentum.SetPtEtaPhiE(pt, eta, phi, pt * TMath::CosH(eta));
     //candidate->TrackResolution = fFormula->Eval(pt, eta, phi, e);
     candidate->TrackResolution = res;
+    candidate->ErrorPT = res;
     candidate->AddCandidate(mother);
 
     fOutputArray->Add(candidate);
