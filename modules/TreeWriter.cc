@@ -216,7 +216,7 @@ void TreeWriter::ProcessParticles(ExRootTreeBranch *branch, TObjArray *array)
 
     entry->D0 = candidate->D0;
     entry->DZ = candidate->DZ;
-    entry->P = candidate->P;
+    entry->P = momentum.P();
     entry->PT = candidate->PT;
     entry->CtgTheta = candidate->CtgTheta;
     entry->Phi = candidate->Phi;
