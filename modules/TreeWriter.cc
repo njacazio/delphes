@@ -355,6 +355,7 @@ void TreeWriter::ProcessTracks(ExRootTreeBranch *branch, TObjArray *array)
     entry->ErrorPT = candidate->ErrorPT;
     entry->ErrorCtgTheta = candidate->ErrorCtgTheta;
     entry->ErrorPhi = candidate->ErrorPhi;
+    entry->ErrorT = candidate->ErrorT * 1.0E-3 / c_light;
 
     entry->Xd = candidate->Xd;
     entry->Yd = candidate->Yd;
