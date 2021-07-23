@@ -62,21 +62,23 @@ DelphesHepMCReader::DelphesHepMCReader() :
 
   fPDG = TDatabasePDG::Instance();
 
-// TParticlePDG * TDatabasePDG::AddParticle ( const char * name,
-// const char * title,
-// Double_t mass,
-// Bool_t stable,
-// Double_t width,
-// Double_t charge,
-// const char * ParticleClass,
-// Int_t PDGcode,
-// Int_t Anti = -1,
-// Int_t TrackingCode = 0 
-// )
-
+  // TParticlePDG * TDatabasePDG::AddParticle ( const char * name,
+  // const char * title,
+  // Double_t mass,
+  // Bool_t stable,
+  // Double_t width,
+  // Double_t charge,
+  // const char * ParticleClass,
+  // Int_t PDGcode,
+  // Int_t Anti = -1,
+  // Int_t TrackingCode = 0
+  // )
 
   fPDG->AddParticle("deuteron", "deuteron", 1.8756134, kTRUE, 0.0, 3, "Nucleus", 1000010020);
   fPDG->AddAntiParticle("anti-deuteron", -1000010020);
+
+  fPDG->AddParticle("triton", "triton", 2.8089218, kTRUE, 0.0, 3, "Nucleus", 1000010030);
+  fPDG->AddAntiParticle("anti-triton", -1000010030);
 
   fPDG->AddParticle("helium3", "helium3", 2.80839160743, kTRUE, 0.0, 6, "Nucleus", 1000020030);
   fPDG->AddAntiParticle("anti-helium3", -1000020030);
